@@ -17,7 +17,7 @@ function ConversorDeMoedas() {
     }, []);
 
     const converterMoeda = () => {
-        fetch(`https://api.exchangeratesapi.io/v1/latest?access_key=6eee169babfe84b2386dfd6f520a5bfbdad&format=1base=${deMoeda}&symbols=${paraMoeda}`)
+        fetch('https://api.exchangeratesapi.io/v1/latest?access_key=6eee169babfe84b2386dfd6f520a5bfbdad&format=1')
             .then(response => response.json())
             .then(data => {
                 const taxaDeCambio = data.rates[paraMoeda];
